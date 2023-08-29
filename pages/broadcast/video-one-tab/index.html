@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Broadcast Video</title>
+    <link rel="stylesheet" type="text/css" href="../../../style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>
+          <a href="https://agilertc.com" title="Video Pub">CoLearn Web</a>
+          <span>Broadcast Video</span>
+        </h1>
+      </header>
+
+      <main>
+        <section>
+          <h2>1. Select elements</h2>
+          <!-- check camera permission -->
+          <button id="checkCameraPermissionButton">
+            Check Camera Permission
+          </button>
+          <br />
+          Camera Permission: <label id="cameraPermissionLabel"></label>
+          <br />
+
+          <label for="">Camera</label>
+          <select id="cameraSelect"></select>
+
+          <label for="">Codec</label>
+          <select id="codecSelect">
+            <option value="h264">h.264</option>
+          </select>
+
+          <label for="">Resolution</label>
+          <select id="resolutionSelect"></select>
+
+          <label for="">Bitrate</label>
+          <input type="number" id="bitrateInput" value="2000000" />
+
+          <label for="">Framerate</label>
+          <input type="number" id="framerateInput" value="24" />
+
+          <label for="">Keyframe Interval</label>
+          <input type="number" id="keyframeIntervalInput" value="3" />
+
+          <label for="">Bitrate Mode</label>
+          <select id="bitrateModeSelect">
+            <option value="constant">constant</option>
+            <option value="quantizer">quantizer</option>
+            <option value="variable">variable</option>
+          </select>
+
+          <h2>2. Select the channel to use</h2>
+          <label for="">Host</label>
+          <input type="text" id="hostInput" value="" placeholder="" />
+
+          <label for="">Port</label>
+          <input type="number" id="portInput" value="" placeholder="" />
+
+          <button id="findChannelsButton">Find Channels</button>
+          <br />
+
+          <label for="">Channel : </label>
+          <select id="channelSelect"></select>
+
+          <h2>3. Publish and subscribe the video</h2>
+          <div class="box">
+            <video id="videoElement" autoplay muted></video>
+            <canvas id="canvasElement" width="640" height="480"></canvas>
+          </div>
+
+          <button id="publishButton">Publish</button>
+          <button id="subscribeButton">Subscribe</button>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
