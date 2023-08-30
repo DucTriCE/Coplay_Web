@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style_remake.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Remote AI Hand Gesture Control</h1>
+      </header>
+      <main>
+        <section>
+          <h2>1. Find the robot and pair</h2>
+          <label for="robotSelect">Robot profile: </label>
+          <select id="robotSelect">
+            <option value="ESP_CW_001">ESP_CW_001</option>
+            <option value="RPI_BW_001">RPI_BW_001</option>
+            <option value="RPI_CL_001">RPI_CL_001</option>
+            <option value="RPI_CL_002">RPI_CL_002</option>
+            <option value="RPI_CW_001">RPI_CW_001</option>
+            <option value="RPI_HA_001">RPI_HA_001</option>
+            <option value="RPI_HW_001">RPI_HW_001</option>
+            <option value="JTSN_HW_001">JTSN_HW_001</option>
+          </select>
+          <button id="pairButton">Pairing</button>
+          <br />
+          <label for="">Connected Robot Name is </label>
+          <input
+            type="text"
+            id="robotNameInput"
+            value=""
+            placeholder=""
+            disabled
+          />
+        </section>
+
+        <section>
+          <h2>2. Send the media server information to robot</h2>
+          <label for="">SSID: </label>
+          <input type="text" id="ssidInput" value="" placeholder="" />
+
+          <label id="label2" for="">Host: </label>
+          <input type="text" id="hostInput" value="" placeholder="" />
+          <br />
+          <label for="">Password: </label>
+          <input type="password" id="passwordInput" value="" placeholder="" />
+          
+          <label id="label3", for="">Port: </label>
+          <input type="number" id="portInput" value="" placeholder="" />
+          <br />
+          <label id="label4", for="">Channel Name: </label>
+          <input type="text" id="channelInput" placeholder="" />
+
+          <button id="sendMediaServerInfoButton">Send</button>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./script_remake.js"></script>
+  </body>
+</html>
