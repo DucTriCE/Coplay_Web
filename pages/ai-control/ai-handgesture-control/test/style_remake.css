@@ -1,6 +1,6 @@
 body {
   background-image: url('https://static.vecteezy.com/system/resources/previews/008/167/404/large_2x/simply-soft-gradation-technology-background-free-vector.jpg');
-  background-size: auto;
+  background-size: cover;
 }
 
 h1 {
@@ -28,16 +28,22 @@ label {
   position: relative;
 }
 
+label#label1 {
+  position: relative;
+  right: -1cm;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 label#label2 {
   position: relative;
-  right: -2.98cm;
   font-size: 1.2em;
   font-weight: bold;
 }
 
 label#label3 {
   position: relative;
-  right: -2cm;
+  right: -1.11cm;
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -53,19 +59,19 @@ input[type="text"]#robotNameInput {
 }
 
 input[type="text"]#ssidInput {
-  right: -1.46cm;
-  position: relative;
-  top: -1px;
-}
-
-input[type="password"]#passwordInput {
-  right: -0.5cm;
+  right: -0.3cm;
   position: relative;
   top: -1px;
 }
 
 input[type="text"]#hostInput {
-  right: -3.42cm;
+  right: -0.4cm;
+  position: relative;
+  top: -1px;
+}
+
+input[type="password"]#passwordInput {
+  right: -1.25cm;
   position: relative;
   top: -1px;
 }
@@ -83,7 +89,7 @@ input[type="text"]#channelInput {
 }
 
 section {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.786);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 25px;
@@ -92,7 +98,51 @@ section {
 
 /* Components */
 
+.tabs__head{
+  flex-shrink: 0;
+  display: flex;
+}
 
+.tabs__button {
+  flex-grow: 1;
+  display: block;
+  text-align: center;
+  font-size: medium;
+  color: #000;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.786);
+  outline: none;
+  cursor: pointer;
+}
+
+.tabs__button:first-child {
+  width: 3.8cm;
+  margin-right: 10px;
+}
+
+.tabs__button:hover {
+  background: #b5aeae;
+  font-weight: bold;
+}
+
+.tabs__button--active {
+  flex-grow: 1;
+  font-weight: bolder;
+  border-bottom: 3px solid #009879;
+  background-color : #b5aeae;
+}
+
+.tabs__content{
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+/* .tabs__content > :first-child {
+  margin-top: 0;
+} */
 button {
   background-color: #567bff;
   color: rgb(255, 255, 255);
@@ -110,6 +160,7 @@ button:hover {
 }
 
 button#stopButton {
+  margin-left: 53%;
   background-color: #567bff;
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
@@ -119,7 +170,8 @@ button#stopButton {
   cursor: pointer;
 }
 
-button#stopButton {
+button#openWebSocketButton {
+  margin-left: 104%;
   background-color: #567bff;
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;

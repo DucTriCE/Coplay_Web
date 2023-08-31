@@ -12,66 +12,71 @@
         <h1>Remote AI Hand Gesture Control</h1>
       </header>
       <main>
-        <section>
-          <h2>1. Find the robot and pair</h2>
-          <label for="robotSelect">Robot profile: </label>
-          <select id="robotSelect">
-            <option value="RPI_BW_001">RPI_BW_001</option>
-            <option value="ESP_CW_001">ESP_CW_001</option>
-            <option value="RPI_CL_001">RPI_CL_001</option>
-            <option value="RPI_CL_002">RPI_CL_002</option>
-            <option value="RPI_CW_001">RPI_CW_001</option>
-            <option value="RPI_HA_001">RPI_HA_001</option>
-            <option value="RPI_HW_001">RPI_HW_001</option>
-            <option value="JTSN_HW_001">JTSN_HW_001</option>
-          </select>
-          <button id="pairButton">Pairing</button>
-          <br />
-          <label for="">Connected Robot Name is </label>
-          <input
-            type="text"
-            id="robotNameInput"
-            value=""
-            placeholder=""
-            disabled
-          />
-        </section>
-
-        <section>
-          <h2>2. Send the media server information to robot</h2>
-          <label for="">SSID: </label>
-          <input type="text" id="ssidInput" value="CEEC_Tenda_5G" placeholder="" />
-
-          <label id="label2" for="">Host: </label>
-          <input type="text" id="hostInput" value="agilertc.com" placeholder="" />
-          <br />
-          <label for="">Password: </label>
-          <input type="password" id="passwordInput" value="1denmuoi1" placeholder="" />
-          
-          <label id="label3", for="">Port: </label>
-          <input type="number" id="portInput" value="8276" placeholder="" />
-          <br />
-          <label id="label4", for="">Channel Name: </label>
-          <input type="text" id="channelInput" placeholder="", value="puveg"/>
-
-          <button id="sendMediaServerInfoButton">Send</button>
-        </section>
-        <section>
-          <h2>3. Send control command using hand gesture</h2>
-          <div class="box">
-            <video id="videoElement" autoplay muted></video>
-            <textarea
-              disabled
-              name=""
-              id="messageView"
-              cols="20"
-              rows="20"
-            ></textarea>
-            <button id="openWebSocketButton">Open</button>
-            <button id="stopButton">Stop</button>
+        <div class="tabs">
+          <div class="tabs__head">
+            <button class="tabs__button" data-for-tab="1">Pairing & Server Connection</button>
+            <button class="tabs__button" data-for-tab="2">Video Streaming</button>
           </div>
-          <canvas id="canvasElement"></canvas>
-        </section>
+          <div class="tabs__content" data-tab="1">
+            <section>
+              <h2>1. Find the robot and pair</h2>
+              <label for="robotSelect">Robot profile: </label>
+              <select id="robotSelect">
+                <option value="RPI_BW_001">RPI_BW_001</option>
+              </select>
+              <button id="pairButton">Pairing</button>
+              <br />
+              <label for="">Connected Robot Name is </label>
+              <input
+                type="text"
+                id="robotNameInput"
+                value=""
+                placeholder=""
+                disabled
+              />
+            </section>
+            <section>
+              <h2>2. Send the media server information to robot</h2>
+              <label for="">SSID: </label>
+              <input type="text" id="ssidInput" value="CEEC_Tenda_5G" placeholder="" />
+
+              <label id="label1" for="">Password: </label>
+              <input type="password" id="passwordInput" value="1denmuoi1" placeholder="" />
+              <br />
+              <label id="label2" for="">Host: </label>
+              <input type="text" id="hostInput" value="agilertc.com" placeholder="" />
+
+              <label id="label3", for="">Port: </label>
+              <input type="number" id="portInput" value="8276" placeholder="" />
+              <br />
+              <br />
+              <label id="label4", for="">Channel Name: </label>
+              <input type="text" id="channelInput" placeholder="", value="puveg"/>
+    
+              <button id="sendMediaServerInfoButton">Send</button>
+            </section>
+          </div>
+          <div class="tabs__content" data-tab="2">
+            <section>
+              <h2>3. Send control command using hand gesture</h2>
+              <div class="box">
+                <video id="videoElement" autoplay muted></video>
+                <textarea
+                  disabled
+                  name=""
+                  id="messageView"
+                  cols="20"
+                  rows="20"
+                ></textarea>
+                <button id="openWebSocketButton">Open</button>
+                <button id="stopButton">Stop</button>
+              </div>
+              <canvas id="canvasElement"></canvas>
+            </section>
+          </div>
+        </div>
+        
+
       </main>
     </div>
     <script type="module" src="./script_remake.js"></script>

@@ -402,9 +402,39 @@ function keepWebSocketAlive(webSocket, interval) {
   });
 }
 
+function setupTabs() {
+  document.querySelectorAll(".tabs__button").forEach(button => {
+    button.addEventListener("click", () => {
+      const head = button.parentElement;
+      const tabContainer = head.parentElement;
+      const tabNumber = button.dataset.forTab;
+      const tabToActivate = tabContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
+
+      head.querySelectorAll(".tabs__button").forEach(button => {
+        button.classList.remove("tabs__button--active");
+      });
+      
+      tabContainer.querySelectorAll(".tabs__content").forEach(button => {
+        button.classList.remove("tabs__content--active");
+      });
+
+      button.classList.add("tabs__button--active");
+      tabToActivate.classList.add("tabs__content--active");
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  setupTabs();
+  document.querySelectorAll(".tabs").forEach(tabContainer => {
+    tabContainer.querySelector(".tabs__head .tabs__button").click();
+  });
+
   pairButton.addEventListener("click", bluetoothPairing);
   sendMediaServerInfoButton.addEventListener("click", sendMediaServerInfo);
   openWebSocketButton.addEventListener("click", openWebSocket);
   stopButton.addEventListener("click", stop);
 });
+
+
+
