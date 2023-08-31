@@ -40,21 +40,36 @@
         <section>
           <h2>2. Send the media server information to robot</h2>
           <label for="">SSID: </label>
-          <input type="text" id="ssidInput" value="" placeholder="" />
+          <input type="text" id="ssidInput" value="CEEC_Tenda_5G" placeholder="" />
 
           <label id="label2" for="">Host: </label>
-          <input type="text" id="hostInput" value="" placeholder="" />
+          <input type="text" id="hostInput" value="agilertc.com" placeholder="" />
           <br />
           <label for="">Password: </label>
-          <input type="password" id="passwordInput" value="" placeholder="" />
+          <input type="password" id="passwordInput" value="1denmuoi1" placeholder="" />
           
           <label id="label3", for="">Port: </label>
-          <input type="number" id="portInput" value="" placeholder="" />
+          <input type="number" id="portInput" value="8276" placeholder="" />
           <br />
           <label id="label4", for="">Channel Name: </label>
           <input type="text" id="channelInput" placeholder="" />
 
           <button id="sendMediaServerInfoButton">Send</button>
+        </section>
+        <section>
+          <h2>3. Send control command using hand gesture</h2>
+          <div class="box">
+            <video id="videoElement" autoplay muted></video>
+            <textarea
+              disabled
+              name=""
+              id="messageView"
+              cols="20"
+              rows="20"
+            ></textarea>
+          </div>
+          <button id="openWebSocketButton">Open</button>
+          <button id="stopButton">Stop</button>
         </section>
       </main>
     </div>
@@ -63,19 +78,5 @@
 </html>
 
 <!-- 
-<section>
-  <h2>3. Send control command using hand gesture</h2>
-  <div class="box">
-    <video id="videoElement" autoplay muted></video>
-    <textarea
-      disabled
-      name=""
-      id="messageView"
-      cols="20"
-      rows="20"
-    ></textarea>
-  </div>
-  <button id="openWebSocketButton">Open</button>
-  <button id="stopButton">Stop</button>
-</section>
+
 -->

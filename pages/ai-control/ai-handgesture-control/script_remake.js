@@ -66,9 +66,9 @@ function initializeVariables() {
   let runningMode = "IMAGE";
   let controlCommandMap = {
     Closed_Fist: "N",
-    Open_Palm: "W",
+    Open_Palm: "CCW",
     Pointing_Up: "S",
-    Thumb_Up: "E",
+    Thumb_Up: "CW",
     Victory: "STOP",
   };
   let lastDirection;
