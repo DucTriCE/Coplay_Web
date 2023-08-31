@@ -134,7 +134,7 @@ function sendMediaServerInfo() {
   }
 }
 
-function openWebSocket() {
+async function openWebSocket() {
   const videoElement = document.getElementById("videoElement");
 
   const path = `pang/ws/sub?channel=instant&name=${networkConfig.channel_name}&track=video&mode=bundle`;
@@ -159,7 +159,55 @@ function openWebSocket() {
   };
   displayMessage("Open Video WebSocket");
   keepWebSocketAlive(websocket);
+
+  const videoDecoder = new VideoDecoder({
+    output: handleChunk,
+    error: (error) => console.error(error),
+  });
+
+  const videoDecoderConfig = {
+    codec: "avc1.42E03C",
+  };
+
+  if (!(await VideoDecoder.isConfigSupported(videoDecoderConfig))) {
+    throw new Error("VideoDecoder configuration is not supported.");
+  }
+  videoDecoder.configure(videoDecoderConfig);
+  websocket.onmessage = (e) => {
+    try {
+      if (videoDecoder.state === "configured") {
+        const encodedChunk = new EncodedVideoChunk({
+          type: "key",
+          data: e.data,
+          timestamp: e.timeStamp,
+          duration: 0,
+        });
+
+        videoDecoder.decode(encodedChunk);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  keepWebSocketAlive(websocket);
 }
+
+function handleChunk(frame) {
+  const canvasElement = document.getElementById("canvasElement");
+
+  drawVideoFrameOnCanvas(canvasElement, frame);
+  frame.close();
+}
+
+function drawVideoFrameOnCanvas(canvas, frame) {
+  console.log("drawing video frame on canvas");
+  
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
+}
+
 
 function stop() {
   websocket.close();
