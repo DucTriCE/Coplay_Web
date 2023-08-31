@@ -128,7 +128,7 @@ section {
 .tabs__button--active {
   flex-grow: 1;
   font-weight: bolder;
-  border-bottom: 3px solid #009879;
+  border-bottom: 4px solid #0fcfa9;
   background-color : #b5aeae;
 }
 
