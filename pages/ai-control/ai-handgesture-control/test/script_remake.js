@@ -273,7 +273,7 @@ async function connectToBluetoothDevice(deviceNamePrefix) {
       { namePrefix: deviceNamePrefix },
       { services: [UART_SERVICE_UUID] },
     ].filter(Boolean),
-  };
+  };  
 
   try {
     device = await navigator.bluetooth.requestDevice(options);

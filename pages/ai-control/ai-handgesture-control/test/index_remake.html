@@ -16,8 +16,8 @@
           <h2>1. Find the robot and pair</h2>
           <label for="robotSelect">Robot profile: </label>
           <select id="robotSelect">
-            <option value="ESP_CW_001">ESP_CW_001</option>
             <option value="RPI_BW_001">RPI_BW_001</option>
+            <option value="ESP_CW_001">ESP_CW_001</option>
             <option value="RPI_CL_001">RPI_CL_001</option>
             <option value="RPI_CL_002">RPI_CL_002</option>
             <option value="RPI_CW_001">RPI_CW_001</option>
@@ -52,14 +52,13 @@
           <input type="number" id="portInput" value="8276" placeholder="" />
           <br />
           <label id="label4", for="">Channel Name: </label>
-          <input type="text" id="channelInput" placeholder="" />
+          <input type="text" id="channelInput" placeholder="", value="puveg"/>
 
           <button id="sendMediaServerInfoButton">Send</button>
         </section>
         <section>
           <h2>3. Send control command using hand gesture</h2>
           <div class="box">
-            <canvas id="canvasElement"></canvas>
             <video id="videoElement" autoplay muted></video>
             <textarea
               disabled
@@ -68,9 +67,10 @@
               cols="20"
               rows="20"
             ></textarea>
+            <button id="openWebSocketButton">Open</button>
+            <button id="stopButton">Stop</button>
           </div>
-          <button id="openWebSocketButton">Open</button>
-          <button id="stopButton">Stop</button>
+          <canvas id="canvasElement"></canvas>
         </section>
       </main>
     </div>
