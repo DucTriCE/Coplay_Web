@@ -159,6 +159,14 @@ button:hover {
   background-color: #4568c8;
 }
 
+button#stopButton:hover {
+  background-color: #4568c8;
+}
+
+button#openWebSocketButton:hover {
+  background-color: #4568c8;
+}
+
 button#stopButton {
   margin-left: 53%;
   background-color: #567bff;
