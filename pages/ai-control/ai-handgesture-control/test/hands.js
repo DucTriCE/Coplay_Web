@@ -3,11 +3,12 @@ const out3 = document.getElementsByClassName('output3')[0]; //output mediapipe
 const controlsElement3 = document.getElementsByClassName('control3')[0]; //Điều chỉnh
 const canvasCtx3 = out3.getContext('2d');
 const fpsControl = new FPS();
+
 const sess = new onnx.InferenceSession();
-const loadingModelPromise = sess.loadModel("./onnx_model.onnx");
+const loadingModelPromise = sess.loadModel("./fixed.onnx");
 
 
-async function onResultsHands(results) {
+function onResultsHands(results) {
   document.body.classList.add('loaded');
   fpsControl.tick();
   canvasCtx3.save();
@@ -30,15 +31,24 @@ async function onResultsHands(results) {
           return lerp(x.from.z, -0.15, .1, 10, 1);
         }
       });
-      const input = new onnx.Tensor(new Float32Array(flattenedArray), "float32", [1,1,63]);
-      const outputMap = await sess.run([input]);
-      const outputTensor = outputMap.values().next().value;
-      const predictions = outputTensor.data;
-      const maxPrediction = Math.max(predictions)
-      console.log(predictions.length)
+      updatePredict(flattenedArray);
     }
   }
+  else console.log("NOHAND");
   canvasCtx3.restore();
+}
+
+async function updatePredict(flattenedArray){
+  const input = new onnx.Tensor(new Float32Array(flattenedArray), "float32", [1,1,63]);
+  await loadingModelPromise
+
+  const outputMap = await sess.run([input]);
+  const outputTensor = outputMap.values().next().value;
+  const predictions = outputTensor.data;
+  const scoreValue = Object.values(predictions);
+  const maxPrediction = Math.max(...scoreValue)
+  const idx = scoreValue.indexOf(maxPrediction)
+  console.log(idx)
 }
 
 const hands = new Hands({locateFile: (file) => {
@@ -59,7 +69,8 @@ new ControlPanel(controlsElement3, {
       selfieMode: true,
       maxNumHands: 1,
       minDetectionConfidence: 0.5,
-      minTrackingConfidence: 0.5
+      minTrackingConfidence: 0.5,
+      modelComplexity: 1
     })
     .add([
       fpsControl,

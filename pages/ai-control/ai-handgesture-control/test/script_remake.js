@@ -149,7 +149,7 @@ async function openWebSocket() {
       await getVideoStream({
         deviceId: device.id,
       }).then(async (stream) => {
-        videoElement.srcObject = stream;
+        videoElement.srcObject = stream; 
 
         await createGestureRecognizer().then(() => {
           detectHandGestureFromVideo(gestureRecognizer, stream);
@@ -221,7 +221,7 @@ async function createGestureRecognizer() {
   gestureRecognizer = await GestureRecognizer.createFromOptions(vision, {
     baseOptions: {
       modelAssetPath:
-        "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task",
+        "./new.task",
       delegate: "GPU",
     },
     runningMode: runningMode,
