@@ -65,11 +65,13 @@ function initializeVariables() {
   let gestureRecognizer;
   let runningMode = "IMAGE";
   let controlCommandMap = {
-    Closed_Fist: "N",
-    Open_Palm: "CCW",
-    Pointing_Up: "S",
-    Thumb_Up: "CW",
-    Victory: "STOP",
+    forward: "N",
+    spin_left: "CCW",
+    backward: "S",
+    spin_right: "CW",
+    stop: "STOP",
+    none: "STOP",
+    batdn
   };
   let lastDirection;
 
@@ -182,7 +184,6 @@ async function openWebSocket() {
           timestamp: e.timeStamp,
           duration: 0,
         });
-
         videoDecoder.decode(encodedChunk);
       }
     } catch (error) {
@@ -199,18 +200,16 @@ function handleChunk(frame) {
   frame.close();
 }
 
-function drawVideoFrameOnCanvas(canvas, frame) {
-  console.log("drawing video frame on canvas");
-  
+function drawVideoFrameOnCanvas(canvas, frame) {  
   const ctx = canvas.getContext("2d");
   if (!ctx) return;
-
   ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
 }
 
 
-function stop() {
+function stop_receive() {
   websocket.close();
+  displayMessage("Close video websocket");
   disconnectFromBluetoothDevice(device);
 }
 
@@ -243,24 +242,22 @@ async function detectHandGestureFromVideo(gestureRecognizer, stream) {
         handednesses,
         gestures,
       } = detectedGestures;
-
+      let direction;
       if (gestures[0]) {
         const gesture = gestures[0][0].categoryName;
-
-        if (Object.keys(controlCommandMap).includes(gesture)) {
-          const direction = controlCommandMap[gesture];
-          if (direction !== lastDirection) {
-            lastDirection = direction;
-
-            const controlCommand = {
-              type: "control",
-              direction,
-            };
-            if (websocket && websocket.readyState === WebSocket.OPEN) {
-              websocket.send(JSON.stringify(controlCommand));
-              displayMessage(`Send '${direction}' command`);
-            }
-          }
+        if (Object.keys(controlCommandMap).includes(gesture))direction = controlCommandMap[gesture];
+      } 
+      if(direction==null)direction = controlCommandMap["none"];
+      console.log(direction);
+      if (direction !== lastDirection) {
+        lastDirection = direction; 
+        const controlCommand = {
+          type: "control",
+          direction,
+        };
+        if (websocket && websocket.readyState === WebSocket.OPEN) {
+          websocket.send(JSON.stringify(controlCommand));
+          displayMessage(`Send '${direction}' command`);
         }
       }
     });
@@ -433,7 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
   pairButton.addEventListener("click", bluetoothPairing);
   sendMediaServerInfoButton.addEventListener("click", sendMediaServerInfo);
   openWebSocketButton.addEventListener("click", openWebSocket);
-  stopButton.addEventListener("click", stop);
+  stopButton.addEventListener("click", stop_receive);
 });
 
 
