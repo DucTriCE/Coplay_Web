@@ -1,286 +1,0 @@
-pytorch1.13.1:ç‹
-²
-input.1
-onnx::MatMul_25/fc1/MatMul_output_0/fc1/MatMul"MatMul2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(38): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-¯
-fc1.bias
-/fc1/MatMul_output_0/fc1/Add_output_0/fc1/Add"Add2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(38): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-„
-/fc1/Add_output_0/relu/Relu_output_0
-/relu/Relu"Relu2ÇC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\functional.py(1453): relu
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\activation.py(102): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(39): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-¾
-/relu/Relu_output_0
-onnx::MatMul_26/fc2/MatMul_output_0/fc2/MatMul"MatMul2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(40): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-¯
-fc2.bias
-/fc2/MatMul_output_0/fc2/Add_output_0/fc2/Add"Add2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(40): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-ˆ
-/fc2/Add_output_0/relu_1/Relu_output_0/relu_1/Relu"Relu2ÇC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\functional.py(1453): relu
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\activation.py(102): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(40): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-À
-/relu_1/Relu_output_0
-onnx::MatMul_27/fc3/MatMul_output_0/fc3/MatMul"MatMul2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(41): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-¯
-fc3.bias
-/fc3/MatMul_output_0/fc3/Add_output_0/fc3/Add"Add2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(41): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-ˆ
-/fc3/Add_output_0/relu_2/Relu_output_0/relu_2/Relu"Relu2ÇC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\functional.py(1453): relu
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\activation.py(102): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(42): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-À
-/relu_2/Relu_output_0
-onnx::MatMul_28/fc4/MatMul_output_0/fc4/MatMul"MatMul2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(42): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-¯
-fc4.bias
-/fc4/MatMul_output_0/fc4/Add_output_0/fc4/Add"Add2êC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\linear.py(114): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(42): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-
-
-/fc4/Add_output_024/softmax/Softmax"Softmax*
-axis 2ËC:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\functional.py(1838): softmax
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\activation.py(1390): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\model.py(43): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1176): _slow_forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(111): wrapper
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(104): forward
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\nn\modules\module.py(1192): _call_impl
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\jit\_trace.py(1183): _get_trace_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(890): _trace_and_get_graph_from_model
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(967): _create_jit_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1108): _model_to_graph
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(1501): _export
-C:\Users\ADMIN\anaconda3\envs\train\lib\site-packages\torch\onnx\utils.py(512): export
-C:\Users\ADMIN\Desktop\Code\test_mediapipe\rebuild_handges\onnx.py(6): <module>
-	torch_jit*±(Bfc1.biasJ Öâà¾ŒWß>Aˆß<:é”¿)ã¾±èU¾­B>B°Ê¾îC&¼ Ov½—Ô+=İyü¾Î/½Óí½I«¿¿Ë¿yG¾™Úé¾“¨¾g¹¿M§¿¹±Ë>à#d½´+_¾éù¿Ëtà¾ÈÔÛ¾‰˜5¿À¿>s´ò>±D¾ú´”>õô¿õLg¾|"!>	Z™½ãAY¿æt$<äV–½$ÖT¿*`Bfc2.biasJP4ò©¾àxÂ¾F”¼13Æ½š¯¾qíµ<*u½Ï=¿<¢½ˆ7½dèÅ¾ñK½—Ô¥¾=ù‰¼‹YÅ½3S&=R<4½âÖ4=–g=¼Å×‰¾*8
-Bfc3.biasJ(X‰Ê:¦Š??İú'@mU>B\E=¡èV?`˜E?™K=?I?iú;?*$Bfc4.biasJÉ`†¿—=Á½LQò¿Úw@õZ>*úN?(Bonnx::MatMul_25JàN›­¼Å’<ÀL½¬·É<¿Ñ¼”•ä¼pO¡;Å;½P&§=µ‹¤<™…z¹L%Œ=eD™<~…=/n•¼’9=’¿È¹ƒ¿<!È†;»<#=n_Ø¼¦ÈJ¼™@q½…‹ø¼X¬h<@@Ï;¤ÚP=z‘D=®P½(€$½pg¼‘ d½ıJ1<QÜP¼l–m½'!»w5Õ¼÷W½¥²k¼[Ñ¼é<¼ıÇ¾é½Ù«½Ò5½È¸¹?Ç+ù=Ws|¼²×­½ğ½¸s½Şï¾~Ó°<¬º½u©Ô¼ÅŠ½¿¢½Ğ¾™ ‡½M}¾vvİ¼èÿ{¼¬ó²½Iç=½ìÒ8¾>t½‘z=´µ½×ÿ>÷¨=ş…‰?Oç¾¼Â|½§â½Ò}½¿Êõ»’)½å„›½Aw%½Nëe¼!"¼¾…¦ä=vÄ >7¼à=Ÿ‚Í>	Œ¾wd¾“7d¾múã=2Z>ÍŒç>`Ù?Ñiã=ÑbŒ»\²)¿an)>/Òç>õYI>D–Ç>Íš?"Í¾)òø¾Æx>ÏZ¾$§Y>İó£¾Èú½Úm>H¾Tä¾¬°>ÎwË¾@…>¢F?YÄ™¾ı›%<VË†>0÷m<=H+/¿ÄæR¼ÏÖ¦=K
-¾«ì;œ‰¼ñu½1{<OÃs»³»ë;È†<Új<ÛS¼3½N½!½³=$+ƒ¼}çÀ½4È=©Æ<o9½‘;ÿs‡¼õ š½t-;Plo½İÏ=Ÿ ½Ï]=‚¶<	Ç¤ºà½×©Œ»µ•<Úã£:”¯²¼’=-½ñÉ)=sbç¼õ ê<Î |<"¶ö¼G¯?DÓ0¾¿/™¼•Vg½E`w¼¯r ¾ß:>²{¾»È‹?öH=Ş½àÃC¾®óô½;Y¢½µó¼Qh¹¼Qù½”%'¾¯ 0½p’¾.]=½n3Å<ÊÏ¼¼ßH½x4ñ½ç’æ:ë/D¾JŞ¼k¨‡½ö¾=İ/u¼7•¶½*8½ãº¼ıÔ>kŒj=Ñd<½ÈÚ=İ¸=H<‘F¿V¡¿¶ş=€q>˜ÏÀÆß=şO„À)o?Ÿè>©Y?äß¾Î @ãLô>Š€Û=41?¥=j¾"Äµ¿4·t@ïo>‡q@-?Óà–> XY?F½Ù?€æ0@¼cœ?Æ†0À–Õ³>Ç¿Ñú>¦Ìd>ãĞ?“¾H,À6R¦¿±B®=8ë“>!›Õ=öòä>H@¿IFh¼5|u=7æ;-=CÏ;‘…È¼Ø©<sa²:/JR=r‰œ<X ç¼D³l¼”§=fÂ¾2~%½näğ¼µ$Ù»Ó9»?Ğ<Ç*V=eåD»(S½¬K°<rÁr½+“œ<`ÅÃ¼)¨±=RkÀ;c;¼»	¸½ ;ş¼I£¼u2<E½h;Û'Ä;º˜ş<QÍ“¼3=aÿ=cĞ¼ö^½ÊaF¾Ó¥%¾mòá¼N"»qoÉ½Ÿ=¬b<G‚½GèŠ>XMş¼¢(¾)Ï£½Ùå‹<á¢½,˜v½Sµ< æ¾Ï½¦ß¾–¦’»÷¤ß<ğ‘Ö½ÚÕ¼<ß“A½“>:½DŒ.?Ğª <„@q=Y@=“L?ï­=ßdi¼—C<’½“>I.X¼Ä­O¼»Š½ñ9†½şæP;;‰¾w,¿W<ÄDa=¨*°¿£n>‰'ÀÚ>¤GÎ>½‰?1Õ½µš'@îÅ>>P&>f>‹|Ş¼‚¿ç@ˆ]->Âª@¢g©>¥¡‹>Ì
-?w?ú¹Ÿ?²‚?BÈ©¿ç9Ÿ>¹ø¾}c$?J8>péŒ?øEú¼Ú­u¿R¶Æ¾ŸB>œİ=Ã<>"¿º>ÇL‹¾mZF<–Iã<í<Šr>!¯<Ó§=3³=m5 ã¤¼)¦Ÿ<8×¥¼á=‰dÏ»œ‚=Cš»yS6>ÑV½d¹Œ»ŸÇ=Ê<øĞé<uù…=>S4=r6³=¡]º=ŠaÈ<]™^>j]†=Q›Ô=¬Iz=²±#½¯´(¼™¸=œ–<è'·=w=µŠ'½²æ9=—Ù='ï¶¼tXì¼\õ-¾°r½ùÁW=umü;ÙO½ËZÎ=:!¬¼Ğòâ¼“‚<(o½ıò½B%>NX¾í¢e½÷ÇG¼ºÈ'<c¯ ½W”³¸°Ğ›½æ¸à¼.¾;ÓğA?2`l¼ëcƒ=`R,¼K¿1>€§Û»o®×¼Êe>=³™=½qN©<ñı<½EĞ»)=nyp=éXÜ¼—í<„Y“½‡@à9~eg¾`¿Æ–½}İŠ¼‡Ò_¿ 	¸>BÄ¿-úº>æ$–>
-T?Ç¢Õ=êó?G³>’‰¿;ˆİ¹=ï6>¼i^¾ŒÖ?s>0@Ü?T½0>¯Ä0¼áHÍ>A<?‚i9?ø0>;m€¿¬É;>íÚÑ¾Åà>ÜA>ÌO8?´<°$†¾hI±¾„g?>²B[=¥Ex>&B>æ./¾¼¦n¼ymÛ½€mÏ½êÙ¾Š$Y½s ‚¾ ¸Ú½öT=Dš½¤p®=— ½6Ú=İ.!;÷û¾„Í<º¶ï½hÃ¼á‘ó<Œ‹:ÄÒ=”ù´<TŒ«¾WŸ‡=;Ÿ=R£<|=Ç™½9±»½W>3s½zèn<;mß½$ÔM¿€§¸½½Ï²½=½)U¨?=a¾„¬X=I6ß?[—<†‹7¾É©¾v‹h=¦°<²Í¼Œ5=¾òK¼«6…=º£>K‡c½J½Z$ç=;¾¹Ğ–½ö²½ "n½IÂ¼¾½<ÛcÒ:w‰b¼vQ½µİ®:ü¤½YêŒ>•[%½Jà=l,6<8	o¾¨Œ»Yg$»ŠÒ<<?Ï¼ö:€$‹=‡Ñ=ø¨½p
- ½İ€§½²Ô»ÏÍR=/Ûá¾B!'¼N	Ä½²GÁ¾7ö<>04’¿İo>5%>¦­>Z–õ<9Ä¶?èR!>m½hÑ=NÏ‰>Íâ‘½«¦?_üa>åd®?‘³=OŠ>j¤œ>ğ²ã>Üìı>˜Ì >h
-¿n >l¼n¾P¥>»]t>á/?ÍÖ8>hµÉ½1p¾GO|;Ô-=hD–<h ‡>S¾:w:½Ÿ¼p=hq(¼Ğ³ô¼Ú!Ì¼4“?¼ •½Z½ÎV¼«ª«º¼a½=Š4=mÆ<.à;Zç.<Ø
-í¼šñ¼YÎ<»š“¼L‘=²ô=˜ê¼BÿŸ¼b©W¼·k¼–À<#-O¼º°<Hr$½Ë’Æ½2"B½hê~½q‘»ø(´¼K$½…ò=|ú¹¼Û,=Ã©=”Â½ë–t<tg˜¾P³<¿,=ÁJ¼¾±I½E|ä¼/²"=İÖO<	˜=?Œ›½âS=_ˆ?õ‘ì½ÕH?½¦¬½õ~¨¼ÓDG<¥Ê/½Æw‰=ïáğ¼¦óË<k9b½Ä4<s;G¼µtÚ¼˜³¢=dA„¼£c·=¿w>™P¯½=[>Ï‡1=B{¼A÷&>¥ù¾™®½§ñ= ĞV=x3¼íÙ+?é%Ô¿Wá=æE¾à]?¡"&?Ñ‘?JØ6½P@(?Ë”?Ôxÿ½e|¿ï?=“º;¾%>%-O>Gè>\“¿æÑ>¿¾{¡¿‹”Ã>v„@"”?v ú>µëğ¾ız?˜–»?×¹¯= é#@f.@Ò6N=O@<Çƒ>arê>7Tç?ú[Ö>Q½>×<Ï>¾‚>¶;„½.£=!ªÒ¼‹(½òÒß¼B˜½XßJ¼«Õ
-½İ—e½OSò¼w›¼Ô‚ö<%ÖF=OÂQ=ép¼Î&â¼ÕÅn¼Ï™¼èB½ğÕ;s	;s«n½6á¾¼Oi¼t ÿ½]“K¼u½ÄbÄ¼.“½Ï@½‘[‚½k[½2i¼A7,¼æ¿½åz½`V9½NNr½€5Ô=¼aè¼8Õ½Æ.¾úõ?=îç†<­ı½¶<½Ò’ï¼fşª¼o>b=oÏ/>XD½Và§=i›"½Wj¹=²‘¢½çæV½š2M½~m2=.dg½Ì&>»Ÿ¹½ÿÏÏ½9€Z½c`º‹äN>as·½>»¼˜œ»P@Ÿ½HÒ»·A½İ‹C=#IA½™Yj½3î¼øC½øÌÚ¼Ç±¼ç}è=\W˜¼wj–>¯î8¿”/½Ş)#¾—o>©ù0>¨0ª>»>tBÄ>×é>uĞû;ê¾3†î>8‚»=m…d=«´>=ûœ=×ë¾/Ñ-¾ë.†¾åÌ>6‡?t
-«>`E>¤]¦¾ß,e>6ß.?Èæu=ë–?Ş;¢?{ÿ>gğe?cúå=…øv>ç÷t?;÷n>(E×;ôƒœ>:Å€¼¸EÛ=˜]›½T¥>®#=…Š»§ìC¼œm½5«»ãr¢½Â%×¼å½æR½ŒÏç<‚ós¼/ß›½–$Ì¼Ù”„½âÍ{½×»1=7b!½±²¼JÙ¾¼Ü¥´½N4½ò®½å|U½zïÛ¼xÖ½Iâ‹<ÒjÏ½ætò½{Ñì¼Úyˆ¼ñò‘¼Šâ¼‹´;Uš;v6À¼¾š¼ 'y½ç¡¼_:uš6¾¨¼<ÇÇ‡»‰ßÁ¼8¤p½y[<YÃ?ş'Û½7ÉV¾J7{½^¹=Ó‹¾án½—½0l~½D´¶»«ë¡¼WW1<¤óï=_Èœ½’q£½dn¾>ª”¶<[¾(*½¼Ï¼±,©½'Í>9Õ…½Ò;>Dƒs½‘%½1pÇ½¹` ¾J½4ô!¾ı¾Ø»BæG>œÇ;¿Ö‡‹½#ÈP¾gôQ>¶So=U!.>¨/ƒ>Ô¸¼kB²¼aõÉ=¶f¾WwÙ½ÂÎâ=Ì™€=²D=×=Q©n¾ÖU¼<D¾^Ól=LG?5"š<ûõ?äS†¾[LO>3.Û>®
-©»×C?t„€?:Y“½Ï;?ÿüå¼Hâ >e?Ø"¾çJŠ=tNK¼Ş*¦=ù.$=QgK½ür=ÆÅ¾™–‰<ZµA¼î.#¼~a½­/:½<È½0­½„_í¼d)=åî¼›|”=M>@¼×Ó½u¼R2u<ßºuº`8š;àbc¼Ãç\½¿˜J¼O±¼‡áH½ùã½‹†Û»2Í»Òœ¼à^H½F¡S¼O½TêS»zÆÌ¼EÑ”½-½b½óG ¼5Wş¼wÃÎ;Ù»¼"“½Zb¾¤æ½ò4½Wº¼ø:½JÎx½³=½²c¾ì¾
-*†½8\,>œR¾éÌ½¦V ½Gãˆ½ÜI½K>ö3~;iß=½ëš½¥R8?z!U¾½Ûb?&	½ß‡¾dÜF½¢[&½¨ïå½g>÷¤¾6jš>¢Å½mÊO¼Á·½ã
-¾uÙ ½…¾y¾0p¾SÆ^:yb™=t¼¿®¦J½û»W¾‘(~>»Êï¼º‡Õ<[Wª>Kpk¾ÇÈ¾Â/8>'â¾öàÛ¾SN+½\’>c«=iÑ8>:¼ª*‹¼‘ôX¾¥Rÿ=4¿j?óo¾¾ ?îÜ¨¾?W>Hv>òL^=æù?~à†?üm¾SPL?På9½¤¹N=T?~e¾äç§»çR1¾©?‚½Ç=3ŠÖ¼ÀØÀ<î=Ø½iı¶¼h+º;Çk`½±©¼ÓKä¼MÙ;=Õ(;=‹Wñ¼fá°<$f=‡×¾‰³¼ÿ¤=ĞÜ<é»%dŒ<=>„Ç¹"m½0=J¿Ó¼É9<½D2‰<€j@»ş&M;,H<îåÈ½‹˜š¼›¥¤½&`¼F9¼D±;¯©<É’Ç¼»ğÛ»õ‚½%*c¼ÃÓt<µÔÌ¾x•¨½à¦‘½Ø}»C¤½Ü‡<K¼«ÊN??>ù¾½d]@=7dª¼¡T³½ÿšU½?ö„½w¦½ÖŸ’=¨Ò9½¬À³=Pü–<$©= {õ;ß=Ä X>¨³˜¼æ^]=#§<½‡kÆ>üÜk=ë½½Fà=-RA½åÕ4½t`>BŸ¾½†^½ùàP?j<>¬Ùa¼JC?¹†¿Ü6>dd(¾È!„?Š2?&?Áö>å
-?Ä”ç>[uÙ½ ‘¿òP?ìƒÓ<ñ”=?îÓÏ>¿‡¿U—¨¾ÿ“¿pŒ>¡ß@)×>®)Š>~ï¿ÜX>1ãª?|zZ>êğ@­@–Œı=Ç?ÁğÉ>Â?Å
-Ô?l¾¿>>Î»i$î>‰Ú½ÇÕ~>e2T¼ñ“z=áç4½H;¼¶¹¼„ö¹¤o½©sf½Eá3½TÖ¼šçÒ¼¼õ<´U(=0^ß¼¶%ã¼
-Å°<Õ-½³™G»€¼nş}<Â£½:Ê:S½oA½ÁŠ½#K½B5š¼s¼j;°-;\â½Ÿ< ½?çt½éÈ×½è„»bpö¼)\<Oå:Ûv½³7½Ûæı=`…ö¼ô˜;Âm+¾O»¾Ba<1ñ¼…fİ¼ $4½w2=/Vİ½”á?ºsÖm½€½=2yÂ½ü%‚¼¾¼¼½=(mºáoŒ½²>*­:½e“9>Ê¬½ŠŒ1¼ë8¤½b$=ˆË…<Lvo½“‚<“6¼:$5Ã½‹sÀ½6&Ã½­“Ò=ùÔL;Ğğ©½Ç(u½-É½Á@]½¦-½YÁg<ùéh¼7ğ=‘…¾šMÉ:;óã½\Ú™>Å¦I=+#^>æÓ¿pì1?ÒB:?+k=¶h¾Æ<`?7>*]í¼Ù6>ŒV*=1x½»Í9>îk¾­FÈ½>(¿hq=?Ú#m¿2§¼$ıˆ½™¨Î>qr™<‹u'?!—¼¾¬ş>räƒ¾`õ3>í–Ï>Ï??+v?Õ&<E“?ÌV}>‡İt<jq!½¶o=ºÚ÷½g¼xƒÀ¼¹‰Q¼T »	¾Î¼ÿ=íV½Kê·¼)Sû<Òœ¢:cÀ¾dÃú¼Çx=µ;“;™cş;¹¥•¼‘<4­Ä»¶Il½«ş¼¥Œ½ææ6½_ƒ¼3‹¡<X·;Ó! ½ıµ-½¹|X½]J¦½9ı®»á3'½ëWc¼@1¼	3½9@K½::ı=Hì¶¼HÇ¼ş¡¾Ã#<™ˆH½8a¼È†½Q•n½:#¼½EP¾^Û¾–H½[­=p~}¾æ½@Q‹½ì#=”ùS½ïS>ƒÏ½ä:>»¤€½´.û>^öw¾jB.?œ‹*;Ow¾Ğí¾½“7ú;½îşG>%Ê¾³)‰>ë½VUL½Kz½ùk¾„Ğ¼˜Ñ"¾1i¾O»“TË½°•Š<=Q•¼q2¾ûd>’û¾ê)“=Rìª¾¿>XG>>ç|å=ª$½{Çº>ñ>š½æÊ8½÷Î½ßÍä<~e?=8Ğh>$a=½’Bz¾Îòw¿R‡>»Œô¾N“b¾Ø›½^­¼6½€kJ=M2z¿Ç->'y¿.’§º˜A>0A>$>ÃqÄ<×J>HL>œÈŒ=±:½0Ïì=`İ<U`¼Õ”<´‰Ç¼ÛU½{÷ú¼£÷¼Q?½®‡ı¼:9=a@s¶ƒ¶ğ½^C‰¼Zƒ=ó2Î¼ŒT:÷$¼1<i›Ÿ;u:	½½Æƒ<#:½IVŞ¼’tÔ¼ô?˜<Å©'»++¼úf½¢R›½––½:…}=‡¡E¼ï°÷¼ù;WÀ¨¼åZ?½ı&Ç¼§w¼¾z³¼ÜÏ½@‚
-¾f_¼hñ½¼ˆz½ô…<-l¾'Z¾à‚æ¾Ï½ŸR®=‹ëx¾²ìZ=oÿŒ½RŸÆ½8"×¼/>°Rİ;_°¾<Áã²½yh¦=\ä¾Cü?ÆÖ¼Ğ–ô?øT½ê¼Ğ¼ÂK(>Ê'-¾Ç+h>÷İ‹½%¼v½¢—›½½‚¾«½¼w‹¾¡ú‘¾Ùi¸:”¾éù¼¼ô_™¼Çø¾Á¥ğ=ë›j¾Ó}ö<„)×»	ÄJ¾ø‡¾Ú«5>À`Ä½!L¾&Ş¨½É™½r˜½VÆ=îc>&ƒO>¼£Ã<h58¾dXh¾×Óv½ËµÜ½3¿88\¾@
-¾[6Ù½Nj0¾¬¿d—½o&¿PêÀ¼}y6>µ­©¾y¥¾< ¦€¼ß°½=~;¶SC½ ¥<Ícà½4zå;½2ó¼ñ<ªá*½ZŞÄ<Tù<b×'=fK!¼‰u<Ÿ=¤sÏ<c>¾¼ô6}=h"½Ã–=+˜J¼™¼=m‚ì»È“A½=QÑ<ÕÂ?½w4½ÉVê:^½Î^4<¹¼ö7½´Á ½Ÿı’½Æx#¼™¡¼›K<×¤8¼-)½‚¯Ã<Ï/¶=æ—¼	HÃº?˜¾0–½5©<½ä‡-½2#½×S¼?×<T;Ò>;fÄ>ëeÍ½™5£=¯¾Fc]<Q†Ò¼“ş®¼%ßq½‘^Z=€bˆ½Ï¸=´=Ù¼<Û?ÇÚÅ=›6s=C6â<§ëa<–<½œİ>má“¼Q‡º½.ßŠ=¡z;äwi½¬¢>Ó¬×>}&<½¹£ß¾5y=·î¼é ?ß6&¿µ¶^<ÜĞï½'E'?½#?a”¾>âİ>ËÍ>grÒ>È}¸=5…¿Ú€Ä>²Ï4=óé½U%?Éùh>‚'¿y‚½×Ü¿I>©Îº?şô”>¦H@>zÄ¿û9½éÚƒ?5g>_É?–™§?Ãß¥=V€?¨‘?8õ>ex?gíy>åŠ<GÏ>SÒ½õ—=•'¶»ıÔ§=.ç»hÂ¼­É2<’tºH8*½Ê`f¼ôX¼} =£Üë¼ñ|ˆ<¥wá¼
-Ö½¹÷÷»H:=cnØ¼Kğ”»m7=,v€¼ö¦<Q9Y½I+Ò<”,½œ'U½yéR;¶8½dŠ<Í“É¼í½’<’»BE½ÅYk¼å½÷®¼¼j¼A½ Å¼ÕL ½ùş¥¼B©t='>¾÷Qé¼ˆC=†r½´½ºOÿ~»Ø 6½®Ş½ d>z¨½ìàH>qŞÌ»º¿*¾Îµ©½:ÂÜ<B÷»½h6ˆ;"Ò,½hK¼=a¾\½z\Š½ı"<°›"=;S/>C›½Øyü¼·Œ;ºÚÂ5½=¢£½„d˜½´>Ö=Ïÿ;½#…=¬´¼®q½GâÑ½0Ø</\ô»ğÒ=¼k£¾ËÍ=…Æ½ØÏ=|o=™Æå=!ª)¾„…?Mp?€Â=ã/s=€+?8-<‰ ‡½ç©0>	`_½i[>tê=
-*>8A½,A¾ğG	?ÄáØ¾¨µ(¾¸—ë½sÁT>°±<ì×>ç”‹¾'ƒ›>xD=1C>K7<>üÍ >0`¡>#Kc½éá¹>t/>´æ½ké¼|ú=r¼¼ ‹½µ8i¼®à¦¼“º½Lb½œ[Ş¼!)¼?*¾¼Vì<X	<ˆ()¾*È¼kç<&È‘¼S=fÌ:‹Aâ<Ç-¼¯Û½Hµ=Ùj^½f½m|è<¡İf<#Y…<2)Ì;òkÑ¼ğ÷½‚åP½9
-µ;£œ¼;†*¼PÙ¼Lª¼ù7<ib=Ø£ª¼8Ó£<¯Nğ½n¾}É¼6ñº*•'½ut ½ñÎ?u‹$¾(‘_¾L·½wµ¼=ÀØ'¾–³½ôı¹½ŸlÑ¼îq½ùbÀ=ßCd½…AA=½Í“=”x/¾¼Mï=i¯|½„˜½GQY½3RÈ¼YUş½¸^‡=cÛ›½Ùx<>p™³»ÆÃØ¼Û®½¾¡^½²-¾¹¾S›.: ˆî¼­f=­õÓ»9@R¾¦-=,¾ræ¶=ËÔË»SÔ ¾ñ”ƒ¾Ã‚>=Š½yp¾àEA>K‘½5†G½Gi »!”>ìõ>_¸š=ˆ^Õ½M©™½H¾ówú»Zş¿ÀË8¾›Ûµ¾ù¢ã¼¥ˆ—¾˜ÿºÁ~<Ÿˆ¸½AÇ|½4ì:´¾˜š¾Êİ–½uüÌ¾ó¾8K½qõ½¯4=ò°„»$‡¿º¿B–¼… ½—.½~kÓ¼EÉO¼¸´ù<‰U;íV9<šè›<õ™ó½ƒ Œ¼ñï¼/â¹Ğ^”={=§¤!;¼P½Û—¡;&3î;,½|
-N¼]Ä|¼‡t˜¼’!<J	v½R½¶–—<òÂ½ó°<ÁG¼Y8Ş¼Eùë¼×ä2½WdÁ=IÏİ¼ª/}¼î8¾jf¯<Ê<XÓ;E©½–¯¼6KÄ¾~M’¾~D¿5:M½@ =ÃÑe¾zÇ¾é‹ú?m˜¡¼éy^½¬…¶<ì>ö¼ÒÊ=LLé?€Ü©=Œ@ˆ¾EŸ¿ÎZ½ñ<+¾µM½¦A‡½\´J½D­>`z¾°èS¾Û5½­>Ÿ¼Ü‹£½³€¾;*6½s¹b¾õHN¾Ã¬»Ëc¾é¶>ÍZ¹=Çd¾¸r¾½×$¾·^H½'>¥q¿%¿­é7>háª½hô¿Œƒ™;ë„»/1¾‰…Ù=zÖî=;$>ÏÜÇ=Ígü½”ºk>‚Ø’¿t^>Q®»¿*C¿¼%ğ¾	¾ô×Î¾‡‘§>.Sn¾yM­>"J½÷{I¾ªÀÒ¾Í
-¿Ù©¾ìN9¿cW#>Ìq%=ÏD»Cão<AF¾8Ç¼ô³¼q–¼Lx<À¿µ»@iÒ¼¢=Ñÿ°¼”+q<ÕîS½¶Ì;½!ğ½Gò»­úõ¼;2‡<My<şTî»ï+¼N)W½*·»7~;µ½`Ó¼Š[»Îú ;ö‹<ø5Z½î%&½vz_½¯;kmÌ;ã	=¶ì¼®›¼nR<8v¸¼jÁ»wÛ6= ¾5/7¼xn4¼´˜;ú‚ü;û{€ºQ±•:q¿ˆû#>Úñê½+¤S=b—>!´!¾:q‹¼ŞçÕ¼¯È½Ÿî<¯Tœ½\w=À¾U¼pëQ<\ô…¾C¼= nú»bï7=$Ïr= Ü¼ÈE´<IÀB<NÈ	¾˜=«ã&=>nk½Tô,>İ<£?Øg½Ñ¬a?‡–>w¨D¼Ô—y>½r‚¾y«®»8äš½¨Á>9ù>Ù˜ƒ=¦©> rC>§á>ù¬ô=_›õ==˜ô=ÍÔ=j®´½XÀ?>ˆä=PÆ>‰q¸=¡">›¤Š=b~u?.$İ=Æ€¹>»ˆ¾vç»H	'?“l&>Y-c?ÿF0?œÀ>Á·È>ŠÃ#?§g>/ËÜ>“ÿ]>©ÌÊ½bØu>‰%3=(½º©`¼e==ãú½¤ à¼HB1½&ü™»øÜò<ì¾<Ó?½<ÁÑ9†²v;»e²<BŠd;ôø»Çqî»¼£ <ö[»ânÅºí;×»˜/<¸»Ë<ÚP=õÀY½“jt½ØÌä;dZa½¨Ç@¼›µ¼Œá\½i«„¼˜‰Ë¼|°
-»ó<Ìü„<÷=`?æ¼]¸Õ<-Ë*>³x7¼Ò¦<Ñ`0¾Ş¡½›^¼õ¥o¼ĞœÁ»(B$½_Ó¼°IY;KEİ=IÇ½ò¯>¶>´½BÖ)=@qê½æê—º:™Ğ½4ğ>G½†½šlå=Ãµ½*›Z½L?Âv½b®>B¿¼½³Fa=!ò½§À½¬î_½©]¾œ®	¾¬ˆ»L´½/d(=k2=b÷@½éñ½é,=+ˆ¼aFp½ı<3ÏG=96¾ê´g>‚X>ÉÛÂ½)»=½^Î<÷%~=ï˜¶=°aM>“ŞĞ<^°³½,ĞV½zN >f1í=EV>Ğë™>ˆ…>lô;as>éˆ¶<ÿı=?Ÿf¾¦3M¾*·=8‚=Í×=§Ö>v-=ED9=†‘>ÍD>Óó¾q7ô½§¤¹½i·>V>q^*½Ê4I<I =`œ½òHq:+¯<uÛ™¼·µ<¸bá<àZ:9.T\=«Ô½5˜¢;Ï<™Ø¾™â»<ä`= ë‰<ç:k¼Ó†¨¼CÁ=gé¨<uĞJ½4Q;=Ö–;†¸6½Z¼€Ğ»ô_œ;ÏO‡<°_Å¼ƒìO¼”{½ı5š<¡$»ÚW2<Aı¼çj¼«ã<á=İuŸ¼"}½‹ıw¾à0Q=È¬z»úûÀ?ü2ğ½²ñ½º§½‘%¾+ª®½d*¾°SË=¿Õ	¾¹Ğ½Ş—ì½®ô¼½»¦ù½*¿÷>;UŞ?ôl½;ê½hÊa¾ƒ\3¾ãO†¾ëO>µ¯¾sËC:ı±½~p}½(³b¾Oıä½f×¶¾øu•½IÛÏ?A‡Æ½ß²B¾ï„E½\Ì½ô‡"?Q»¼·ü™¾Y£¥>´~=ò.¾Ç1Ô=B±ã½ZV¾½¡g{=Æ×¾ğ’˜¾g‹>‘B#>²ÔÔ¾’f»;Ê¥ª½mçø=á=‘‡>²_´>¥>˜ ¾È†]<Çh¾¾¹L'>s‚¿d|¾cÆ½"¯†<²ó¿¾SÙ¾=iÇ½Ï§ ¾>¶">Â¤ş¾É.¥¾4o´½§Ëu¾hî³¼Ş›=½~Æ<`¼"õ=í?æ»K”,¼ïo<y‚<—Ï;K=~ZÙ=†0k¼J+Ñ¼Å8æ<ë‘¬=¨­;0à=¯+¼­èH=›Æë¼ì\ø<Ê\<kl?¼>È<	é*=HWt½Â¸<H¸==äˆC<±‘=˜"½O‡¼õşŸ¼Ê¡<?x½»`k=ÍT<]Aá¼å;=“º“½« s¼gİ¼z[¿êÅ¯½İ§¦?TÒ²¾xU’½Änä<o6d¾ÔŠß½êU¼Òö?6“½5	û½Â/H=şœÀ½TÁÂ?©' @öq¼§Œ(¿>ë½Ô‚¾sŞ¾½}Y”¾.;I¾üj-¾U*G¼ÂEÕ?·68¾‚“œ¾	2½÷Â¾­×Ş?˜¯¯¾òÌz½µì¾.?~?ˆíó½Áù¾4l†¼Ñë‚¾¼óè>q¶=Ğ¨š¾“ò=‡G„¾Ãg¾¡XÔ<©n3¿H#!¿š®)>A~.>¼ñ?¿î¤¼¥±I½ùC=…µ=Ëw©>ŸW>ıï>pK2¾‚æm=æ%¿«Î>;E¿-Š¾@¾8<=m¿‰M¾× ¾a"W¿^ñ>AŸÒ=•ğ¿Ç-ì¾|¢´½ÓR¿¬N=¾ºmª½*š(Bonnx::MatMul_26J€,Æß¿ÈÕÚ¿â!‡>
-HT;N¯ø¿R¦¼Ó5W>—;cS>Aü*>ZT<É›>×8,=±°¨=#Î>Z‰½J¯>~é<½ÜH¦<3Iß¿{|‰½hê|½õLİ¾EŒ\½•„¾<‰¾Má\¿ù!Õ=Êİ¼Ÿ	
-¾ÚÑ¶=o¾)¸E¿É–¾OI…¿PÌ_>úg¾@áï=—ôœ¾)û½À,¾¯
-±½¼œJ½´ù)¾Ü¼S¼B›h<Ånº1³=Ç„<h¯K½4<s_==€u¬=k©Œ½7Ï=/ş£½5©È½ª=ÈĞ=eÜÿ=¡m}>‡ï4>Tw¿Ç?ØbD>>¾‰½p=»À‡¿‘­*?àı·¿H!å?a4§¿âLç?Œ³¿ßQ’?/œ	@=¿™¿&£@Ù<µ¿[†>N¾“”×¾Ç³¥¿ş›½#²Ê¾Ä×¡¿UÜ>FÀ=šíL¾õ´T¾ T?ı‡¾ùk~?ßgÕ¿/yú>p‚ª?İôå½AM?ÓÉ¿Àj¥¾%aè¿tä¿YÀ?D‡¾˜Èí¿|=H;.?SM°=1ğ>¨«> ¨\¾.$>Ä^¹½Qœ>ì•>Mõ¡¾~n‰>·ú}¾
-=[lé¿N"m¿«×¿‚)½^>kI¿îò£:¤â&¼©©–;ØÎó<¥Ïv;í÷Ô=XÎÕ¼°
-~=‘ÑÁ¼ºÛî¹Gÿˆ=29½J ˆ<˜İË¼$&Œ¿Ç‹>™U>›¾Y©s>ëy>ÍVÍ>~š¾=;§¿‡m½÷ÔÍ¿#]8>À°Ì¿·c<mü3>œ­&¿Kü—½%(Ü¿kÅ	½œ1_>éı£>Kd½ií£¾wS3?Â_s¾+35½ÇH…<Â**?ÉG’>húÅ>ôé¹>Ì-±¼¢>&>J¾—
-4>ø‚ÿ=a£Ÿ¾å9y>ø;‡¾I‘‚9^Ûh=©¼×=šÓ>¨ü%>Æ;4‹>‹2x¼€/´½_u>B£²<µO>z‡i<À >€*½ñ=1ñ¥=è:=±M>‚š€½/Ö¸¼'aQ>Ìkj>.§\>
-²¿œ0ß¾Öí=ş:*¿{õ¼ï]½Æ­~¾ı„¾:ñ¼[Ç¾ä>öè¤¿<Q0˜?£¹‹¾qt‡?†ª›¿-&> «7?á©@?o:g¾2ğ5>0Ú^? —?Yÿ¿a?ÑEj¿Ğ{:=œkÄ>“’=iª,>|Ñx¾A•h>"¼>¨³=ÉÇ™>3¢¾›Ó?W/ü=£j¥¼0Ş?'—ˆ¾3U½Iˆ%½Û>–Õ>m•=Â>®»½åñƒ>p3¾lÚ.>äÚp>ëëš¾ğ˜ö>½“¾‹<ú¾«ea=ÜX·½`P ;Wt>şƒ‡=Û >ÖcR¼“‹½¸½=y?3¼üH¾2˜=H?å=(sÇ»tQ=`aN=KÿŸ½º?‰½-¨½S·= Pª>GÍ?ğûİ>•mÉ>Ùq´>¸:?¢P¿d~Ö¿Í…¾(>ÀWÃä¾˜T?Àª©õ¾¯-?˜ó“¿ÙÂê¾t>8À¹ÄÚ¾ih?Èÿ²>Ğ³:>F­^>Æìs¿Ú8s;X«†>MY…¾zI¾)S
-¿YX¾»÷¾Í">?íV¿bB?êÉƒ¿p·Ğ>jÆŒ?ó’¿Å†?ó¶–¿iÀ>B‰=şĞO>Èµ¿!ó¾²i>ªH¿ˆ¢¾¬êÁ½¨øb¾WQã¾ø_#½Ÿ+¿Y¨>ï½À¿ºÚ–=Œ°?ú|¿wÄ–?j¶¿ “í=)5+?¿?µD$¾çÂ–<r?8”Š?Ö±­½•˜=õá¿æBu¾Ë2
-?5U›½åe¸>J{¾çb—=­¾ÿ>¡¸¾€šé>-=Ñ½„&?@˜>!8ğ>¦É©¿6óò¾ç×!?Ñ­ ¿î,2¼f€¦=5Ö¾Ï/M¾¶
-İ>aH ¾Ş¾u?ÎP×¿æ7Ï>¸¸Å?ÀÀ½•È?§Ò¿<âë>©y?›}?m»ò¾,—{>9Ï„?ÂÃ?4#¿ÈB?õÙ|¿_NÕ½„v·>Ëƒ¾ùè†<Ròá¾D1i><A‰>=5¡¾Ğ8”>³ª¾Uo?|å¥>Ò–>3{¥>³Rò>áT–>¡$	?æUÈ¾/àÁ¿â4¾èŞ¿‹ê
-¾ˆç¿õr»|?>
-¿=š¾†´ã¿DZW¾o¬?
-ì¯>ØŸ=t8½tÅw>¸n&?'Æ®»?>ÿs`>Ñí¾éÅ>x¶%¿ d˜=Ë4¿!ŸP=ö?>Ÿ,f=ÏE·¼W-¿çŠ=p<>µ½éÃ!>4ÔÑ¼`ùï>‘:Ñ¾&°G>6€È¼È·>…”ˆ>Ç[[¾V7ò>éˆå½À²Å>À‚½ët=0¨D>=T5¾D¬Õ>Cn¾ì‡€½—¥>©">Üë=İ¾Z»tà>Zvn>Oy*>uÉ=¾o(¿¤‘Ï¼’Í}¿bŞƒ¼ñúŠ¿ºë¥¼0Ø¤=¸Dø¾©¤¬¼M€¿3
-½ü‰é<Óğ=-?9>@=> İ’½r?Ë…>Š$¾Lş">ğk«½b¼Á>·=~Q#?½¼m=,Ğ>‚½ş‹>Å=Ë=Uã¦<q«Ê=;ø|¾dV>pÊØ>õóÀ>E·=`"¤>J¥>Ê>•£¿èà¿El¾•~
-À’X¾lÀ(Î¾’*­>s¥G¿²¾œ>	Àv—¬½Oî°>qµ >*ğH¿§/|¿İÖ÷;åÌv>JL—¿ºB½ïïc>—¥!<€U=_TÍ<*ML>· ¢=‘¶=›ëL¼Ş¹)>ˆØF=-«z=ÔK;=ÓW<½õ5c¿o…>üª‘>ÕÏ¿±À¾b—~>)#û¾Jœ—¾>ìÍ¾h´¹¾ú5¿—T±>EÁA¿Ö1.?!Áø¿³l>á?†Vh¿PòÚ?Äì¿Œè=($¿ô}9¿Šòa>1S‘>Ì¿TıÁ<¯”ó>¤‚¼Ÿı?•¼I¼<J>Û=ñâN=¢Ù+¹>±>vu:=NR¤<¿5{=fa=r{(¿÷bw¾¹æf¾³e³>r®8?’?¾1ˆ?>U8½>Úš•¾:„?e^À¾-BÌ={í¾4¦<)JZ>] œ½ƒ Á½i#¹¾JÆ(½ÿX–>´Ì¢¾X‡ ¿Xºœ¿Úò©?“ú¿¾µM‘¿¿u½ıar?œH?;>µú?”~°¾´Ù+?ª‘Õ¾ñ*›>®;Á>ıÓ7¿º?sÇ3¿)€½­ù—¿Ey˜<?{<†wã>.?m=wüõ=µˆ\>eÚÃ½Ë*?@g¾<‰¼CM¦½Í`ì½/Ç>‡y¾É¤¾WÓx¾>xÑ½˜ìÁ>ş×¹=­Š¦>‹£>¿O›h?L¾”>ÆùN½$7·>%H¿ë>Æ>¿Lçû?Í‡J¿1Ï½?± ¼¿ÈP£?`å?\ÉL¿:¡@	·Ğ¿'_q>jÉë½é¬¾ô%<¿Wo¾†šC¾Õ‰¿lC>Á®|>Ò]R¾;O=‘Õó>Ãò`=Ö Z?d"¤¿E˜'>EÄ’?–„÷¼ı{?¼Á¿õ£¾5ôe¿ºõB¿ã0><
-½~-N¿‚œH<KŒ>ïV=Vş=”>·Nû½¿D>íE¼»4Åz=Hí§=bÁ½>Ë+õ½Ğ[b=,"¿‘ë½¾Ö—½“A=?J¾Î{£=,­½ÙO>GÕŒ>Ë¢
->dí>É±:¾CÉ>İe²½W^)>< ‹>ÛÄ¾Á"¤>ÒP¨¾S![»ÏòÛ=[ğ€>”p£>µŞºk*9@’mv>-„¾.mª?“ã“¿R÷?Á­T¾š01@œo&=S5@ßL¿d\@±"–?*3ˆ¾,d¥?Óö¿kô‹>ƒ½ÃÙ¾™?#~¾@4Ò½YƒI½­Àô>íÁa>1É>®N˜>Õ½)çÁ>nı½Ç=f>Œw>šğ¾ıG‰>j†¾Ó¼ª½Z;}PD>c.M=3Ú<Ç&"¾
->b·8½02¼1è=Vdë½¨=¥=Î`»b5»=…µ>QW¶¼3š=%g/=õŠ=Ÿö‹=–\®½	¥=J§Œ¿X˜¿¾Â¡?º<@)—­¿Î¸>§7@ ,²¾Ó=/@hï»½ó'è?Hìæ¼ÙD?Ó¡¾>ª±D?Zc¾VS½ê·½†¼>Š‡–¿*º
-Bonnx::MatMul_27J Æ~¾?È„†¿9ƒÀDÜ@Á‰Ö¿È®ê>mÕ”¿ÙÕ=?0W@×~®?”Èé?¥´¿c&ÀsX@@­Í¿w D?Õ¾À¿•ıW?U&@ãê˜?ül?Ş ª?Å´ô>u6?ü?¹>Ş¡Ô½R“½jß?=‚¾¿>œ¾'•>Mó-?//=¹ª?ù&›>ôİ>u¯V?×»•?Û\¾èn¾şuÇ?ûK”¿0ñ	Àğg@!Ô¿&;?­Ÿ¿+Ü?CÀ@…Ì§?pnÂ¿É$A?AQ¿uùà?Ç•¿IÊÊ=-Yİ?¿Á„>¼ôM?w>ƒ¿õàì>º9?¯%?ğU<ö1?7ÀM9B>ß®?ÊÛÅ¿¨V†=srh?6S½¾z?Œp€¿t‘¿Å”…¿_ÿ¿z*=ÑC6?M×$@‡wá>êo?g?>C'?e¹Y?Q®—½¤C>²Ì?Î°”¿)˜©½¤6/@>i?áF?ó[¿ÛÎ¶¿DäÀYHÀéÿ;@'ê’¿|š?å)?î¤½r8¾œ	8?n?İ¬? º¸?}÷W?ßm½Hn¨>çJ!@*Ç?ö€*?2_¿]àğ¿ı3À¦à"À²g>@%ª—¿Ï‚?œR¹?oPˆ¿zd¾Ëƒ>¢??æ´á?ìªn?¼~¿P„ù<¦­„?ñ$Ù<©‡@ >Å@ CÀ&WÈ¿ÖM•¾W9@Š›˜¾Fn™¿éÃ@eO¾ô¦y½sış=ä?æ"N>]¦­=ú¼¥?vÔ¾•Ál?í!?H¸¿:z->°B ½1¶Ü>V²¿?âÑX>}¥=iº>ıÉ°?0@ìHí?Ljy?†ìë¾É*ã¿xÀ­æ*À˜X.@hLª¿—]—?ÔÆ?s›Å¿±Ñ=TN•½Æ_ù>“ªÆ?.ÿ>9áÔ=éfÏ>„$™?#
-U¿±Üó?È—
-?íeC@ÛŒ¿Ò¯Ñ=K¶µ?¬Új?~Å=°ÀkOÀ?Jœ¿¥ëÀpF"@-ò Àèª ? u¿¬ ?bb@xf°?*â
-Bonnx::MatMul_28JÈ¬Ğ>ÈfÇ?Ã»;?=İ¿ÏEÀæ“-¿â£­>ï³¿k±¿‰Yš?Uµ ¾Ù_³>(šWÀ!]¬>	_1?9&{¿:™¿â÷Õ?'¨À"şÀ>€=¹?a÷—¿.v¿×«‹¿X¬¿RO?Ëo*ÀsæÀ>Ğ?ínC¿Ÿã?n.FÀ]­‚¾Éß9¾Yf¯>Æ‹ ¾±dr?3Æ2>(ÿoÀLı>¡Ğ¿CVÀ#à›?g(Í?æ:3¿ÁÇİ¾0«>¡Bö>^x?†K–ÀZ
-input.1
-
-
-
-?b
-24
-
-
-
-B
