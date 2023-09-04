@@ -80,11 +80,11 @@ function initializeVariables() {
     let websocket;
     let networkConfig = {};
     let controlCommandMap = {
-        forward: "N",
-        spin_left: "CCW",
-        backward: "S",
-        spin_right: "CW",
-        stop: "STOP",
+        0: "CCW",
+        1: "CW",
+        2: "S",
+        3: "N",
+        4: "STOP",
         none: "STOP",
     };
     let lastDirection;
@@ -367,7 +367,7 @@ async function updatePredict(flattenedArray){
     const scoreValue = Object.values(predictions);
     const maxPrediction = Math.max(...scoreValue);
     const idx = scoreValue.indexOf(maxPrediction);
-    console.log(idx);
+    return idx;
 }
 
 function onResults(results) {
@@ -383,37 +383,41 @@ function onResults(results) {
             flattenedArray = flatten_1.concat(flatten_2)
         } else{
             if(results.multiHandedness[0].label==="Left"){
-            landmarks_right = results.multiHandLandmarks[0];
-            const flatten_2 = landmarks_right.flatMap(obj => Object.values(obj).slice(0, -1));
-            flattenedArray = landmarks_left.concat(flatten_2);
+                landmarks_right = results.multiHandLandmarks[0];
+                const flatten_2 = landmarks_right.flatMap(obj => Object.values(obj).slice(0, -1));
+                flattenedArray = landmarks_left.concat(flatten_2);
             }
             else {
-            landmarks_left = results.multiHandLandmarks[0];
-            const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
-            flattenedArray = flatten_1.concat(landmarks_right);
+                landmarks_left = results.multiHandLandmarks[0];
+                const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
+                flattenedArray = flatten_1.concat(landmarks_right);
             }
         }
-        console.log(flattenedArray);
-        updatePredict(flattenedArray);
-        // let direction;
-        // if (gestures[0]) {
-        //   const gesture = gestures[0][0].categoryName;
-        //   if (Object.keys(controlCommandMap).includes(gesture))direction = controlCommandMap[gesture];
-        // } 
-        // if(direction==null)direction = controlCommandMap["none"];
-        // console.log(direction);
-        // if (direction !== lastDirection) {
-        //   lastDirection = direction; 
-        //   const controlCommand = {
-        //     type: "control",
-        //     direction,
-        //   };
-        //   if (websocket && websocket.readyState === WebSocket.OPEN) {
-        //     websocket.send(JSON.stringify(controlCommand));
-        //     displayMessage(`Send '${direction}' command`);
-        //   }
-        // }
-    } else console.log("NO HAND DETECTED");
+        let direction;
+        let gesture_num;
+        const handleDirection = (direction) => {
+            if (direction==null)direction = controlCommandMap["none"]
+            if (direction !== lastDirection) {
+                lastDirection = direction; 
+                const controlCommand = {
+                    type: "control",
+                    direction,
+                };
+                if (websocket && websocket.readyState === WebSocket.OPEN) {
+                    websocket.send(JSON.stringify(controlCommand));
+                    displayMessage(`Send '${direction}' command`);
+                }
+            }        
+        };
+        const wait_for_gest = async() => {
+            gesture_num = await updatePredict(flattenedArray); 
+            direction=controlCommandMap[gesture_num];
+            console.log(direction);
+            handleDirection(direction);
+        }
+        wait_for_gest();
+    }
+     
 }
 
 
