@@ -36,7 +36,7 @@ let {
 
 //Setup model for prediction
 const sess = new onnx.InferenceSession();
-const loadingModelPromise = sess.loadModel("./4_9_126nn.onnx");
+const loadingModelPromise = sess.loadModel("./5_9_afternoon.onnx");
 
 const hands = new Hands({locateFile: (file) => {
     return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
@@ -80,12 +80,14 @@ function initializeVariables() {
     let websocket;
     let networkConfig = {};
     let controlCommandMap = {
-        0: "CCW",
-        1: "CW",
+        0: "STOP",
+        1: "N",
         2: "S",
-        3: "N",
-        4: "STOP",
-        none: "STOP",
+        3: "FCC",
+        4: "FCW",
+        5: "CCW",
+        6: "CW",
+        7: "STOP"
     };
     let lastDirection;
     return {
@@ -308,7 +310,6 @@ async function openWebSocket() {
   
     websocket = new WebSocket(serverURL);
     websocket.binaryType = "arraybuffer";
-    camera.start(); 
     websocket.onopen = async () => {
         if (device) {
             await loadingModelPromise.then(() => { //await model
@@ -370,53 +371,46 @@ async function updatePredict(flattenedArray){
     return idx;
 }
 
-function onResults(results) {
+async function onResults(results) {
     let landmarks_left = Array.from({ length: 63 }).fill(0);
     let landmarks_right = Array.from({ length: 63 }).fill(0);
-    let flattenedArray;
+    let flattenedArray; 
+    let direction;
+    let gesture_num;
     if (results.multiHandLandmarks && results.multiHandedness.length) {
         if(results.multiHandedness.length===2){
-            landmarks_left = results.multiHandLandmarks[0];
-            landmarks_right = results.multiHandLandmarks[1];
+            landmarks_left = results.multiHandLandmarks[1];
+            landmarks_right = results.multiHandLandmarks[0];
             const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
             const flatten_2 = landmarks_right.flatMap(obj => Object.values(obj).slice(0, -1));
             flattenedArray = flatten_1.concat(flatten_2)
         } else{
             if(results.multiHandedness[0].label==="Left"){
+                landmarks_left = results.multiHandLandmarks[0];
+                const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
+                flattenedArray = landmarks_left.concat(landmarks_right);
+            }
+            else {
                 landmarks_right = results.multiHandLandmarks[0];
                 const flatten_2 = landmarks_right.flatMap(obj => Object.values(obj).slice(0, -1));
                 flattenedArray = landmarks_left.concat(flatten_2);
             }
-            else {
-                landmarks_left = results.multiHandLandmarks[0];
-                const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
-                flattenedArray = flatten_1.concat(landmarks_right);
-            }
         }
-        let direction;
-        let gesture_num;
-        const handleDirection = (direction) => {
-            if (direction==null)direction = controlCommandMap["none"]
-            if (direction !== lastDirection) {
-                lastDirection = direction; 
-                const controlCommand = {
-                    type: "control",
-                    direction,
-                };
-                if (websocket && websocket.readyState === WebSocket.OPEN) {
-                    websocket.send(JSON.stringify(controlCommand));
-                    displayMessage(`Send '${direction}' command`);
-                }
-            }        
+        gesture_num = await updatePredict(flattenedArray);
+        direction = controlCommandMap[gesture_num];
+        console.log(direction);
+    } else direction = "STOP";
+    if (direction !== lastDirection) {
+        lastDirection = direction; 
+        const controlCommand = {
+            type: "control",
+            direction,
         };
-        const wait_for_gest = async() => {
-            gesture_num = await updatePredict(flattenedArray); 
-            direction=controlCommandMap[gesture_num];
-            console.log(direction);
-            handleDirection(direction);
+        if (websocket && websocket.readyState === WebSocket.OPEN) {
+            websocket.send(JSON.stringify(controlCommand));
+            displayMessage(`Send '${direction}' command`);
         }
-        wait_for_gest();
-    }
+    }        
      
 }
 
