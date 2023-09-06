@@ -36,7 +36,7 @@ let {
 
 //Setup model for prediction
 const sess = new onnx.InferenceSession();
-const loadingModelPromise = sess.loadModel("./5_9_afternoon.onnx");
+const loadingModelPromise = sess.loadModel("./svm.onnx");
 
 const hands = new Hands({locateFile: (file) => {
     return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
