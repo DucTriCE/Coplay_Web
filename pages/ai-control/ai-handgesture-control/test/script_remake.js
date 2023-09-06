@@ -71,7 +71,6 @@ function initializeVariables() {
     spin_right: "CW",
     stop: "STOP",
     none: "STOP",
-    batdn
   };
   let lastDirection;
 

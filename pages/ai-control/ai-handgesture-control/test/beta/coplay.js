@@ -36,7 +36,7 @@ let {
 
 //Setup model for prediction
 const sess = new onnx.InferenceSession();
-const loadingModelPromise = sess.loadModel("./svm.onnx");
+const loadingModelPromise = sess.loadModel("./6_9_2.onnx");
 
 const hands = new Hands({locateFile: (file) => {
     return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
@@ -310,10 +310,11 @@ async function openWebSocket() {
   
     websocket = new WebSocket(serverURL);
     websocket.binaryType = "arraybuffer";
+    camera.start(); //detect
     websocket.onopen = async () => {
         if (device) {
             await loadingModelPromise.then(() => { //await model
-            camera.start(); //detect
+                camera.start(); //detect
             });
         }
     };
@@ -359,7 +360,60 @@ function stop_receive() {
 }
 
 
-//Main function for model
+// Main function for model
+function calcLandmarkList(landmarks) {
+    const imageWidth = 640;
+    const imageHeight = 480;
+    const landmarkPoint = [];
+  
+    for (let i = 0; i < Object.keys(landmarks).length; i++) {
+        const landmark = landmarks[i];
+        const landmarkX = Math.min(Math.floor(landmark.x * imageWidth), imageWidth - 1);
+        const landmarkY = Math.min(Math.floor(landmark.y * imageHeight), imageHeight - 1);
+        const landmarkZ = landmark.z;
+        landmarkPoint.push([landmarkX, landmarkY, landmarkZ]);
+    }
+    return landmarkPoint
+}
+
+function preProcessLandmark(landmarkList) {
+    const tempLandmarkList = JSON.parse(JSON.stringify(landmarkList));
+    let baseX = 0;
+    let baseY = 0;
+    let baseZ = 0;
+
+    for (let index = 0; index < tempLandmarkList.length; index++) {
+        const landmarkPoint = tempLandmarkList[index];
+        if (index === 0) {
+            baseX = landmarkPoint[0];
+            baseY = landmarkPoint[1];
+            baseZ = landmarkPoint[2];
+        }
+        tempLandmarkList[index][0] -= baseX;
+        tempLandmarkList[index][1] -= baseY;
+        tempLandmarkList[index][2] -= baseZ;
+    }
+    const absmaxValues = tempLandmarkList.map(row => row.map(element => Math.abs(element)));
+
+    const numColumns = absmaxValues[0].length;
+    const maxValues = Array(numColumns).fill(0); // Initialize maxValues with negative infinity.
+
+    absmaxValues.forEach(row => {
+        row.forEach((value, columnIndex) => {
+            if (value > maxValues[columnIndex]) {
+                maxValues[columnIndex] = value;
+            }
+        });
+    });
+        
+    const normalizedLandmarkList = absmaxValues.map(row => {
+        return row.map((value, columnIndex) => {
+            return value / maxValues[columnIndex];
+        });
+    });
+    return normalizedLandmarkList
+}
+
 async function updatePredict(flattenedArray){
     const input = new onnx.Tensor(new Float32Array(flattenedArray), "float32", [1,1,126]);
     const outputMap = await sess.run([input]);
@@ -379,23 +433,36 @@ async function onResults(results) {
     let gesture_num;
     if (results.multiHandLandmarks && results.multiHandedness.length) {
         if(results.multiHandedness.length===2){
-            landmarks_left = results.multiHandLandmarks[1];
-            landmarks_right = results.multiHandLandmarks[0];
-            const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
-            const flatten_2 = landmarks_right.flatMap(obj => Object.values(obj).slice(0, -1));
+            landmarks_left = results.multiHandLandmarks[0];
+            landmarks_right = results.multiHandLandmarks[1];
+            const temp_1 = calcLandmarkList(landmarks_left)
+            const normalize_left = preProcessLandmark(temp_1)
+            const temp_2 = calcLandmarkList(landmarks_left)
+            const normalize_right = preProcessLandmark(temp_1)
+            // const flatten_1 = normalize_left.flatMap(obj => Object.values(obj).slice(0, -1));
+            // const flatten_2 = normalize_right.flatMap(obj => Object.values(obj).slice(0, -1));
+            const flatten_1 = normalize_left.flat()
+            const flatten_2 = normalize_right.flat()
             flattenedArray = flatten_1.concat(flatten_2)
         } else{
-            if(results.multiHandedness[0].label==="Left"){
+            if(results.multiHandedness[0].label==="Right"){
                 landmarks_left = results.multiHandLandmarks[0];
-                const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
-                flattenedArray = landmarks_left.concat(landmarks_right);
+                const temp_1 = calcLandmarkList(landmarks_left)
+                const normalize_left = preProcessLandmark(temp_1)
+                // const flatten_1 = normalize_left.flatMap(obj => Object.values(obj).slice(0, -1));
+                const flatten_1 = normalize_left.flat()
+                flattenedArray = flatten_1.concat(landmarks_right);
             }
             else {
                 landmarks_right = results.multiHandLandmarks[0];
-                const flatten_2 = landmarks_right.flatMap(obj => Object.values(obj).slice(0, -1));
+                const temp_1 = calcLandmarkList(landmarks_right)
+                const normalize_right = preProcessLandmark(temp_1)
+                // const flatten_2 = normalize_right.flatMap(obj => Object.values(obj).slice(0, -1));
+                const flatten_2 = normalize_right.flat()
                 flattenedArray = landmarks_left.concat(flatten_2);
             }
         }
+        console.log(flattenedArray)
         gesture_num = await updatePredict(flattenedArray);
         direction = controlCommandMap[gesture_num];
         console.log(direction);
@@ -411,7 +478,6 @@ async function onResults(results) {
             displayMessage(`Send '${direction}' command`);
         }
     }        
-     
 }
 
 
@@ -422,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tabContainer.querySelector(".tabs__head .tabs__button").click();
     });
   
-    pairButton.addEventListener("click", bluetoothPairing);
+    // pairButton.addEventListener("click", bluetoothPairing);
     sendMediaServerInfoButton.addEventListener("click", sendMediaServerInfo);
     openWebSocketButton.addEventListener("click", openWebSocket);
     stopButton.addEventListener("click", stop_receive);
