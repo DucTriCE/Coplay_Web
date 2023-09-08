@@ -373,13 +373,35 @@ async function updatePredict(flattenedArray){
     return idx;
 }
 
-async function onResults(results) {
+const out3 = document.getElementsByClassName('output3')[0];
+const canvasCtx3 = out3.getContext('2d');
+
+function onResults(results) {
     let landmarks_left = Array.from({ length: 63 }).fill(0);
     let landmarks_right = Array.from({ length: 63 }).fill(0);
     let flattenedArray; 
     let direction;
     let gesture_num;
-    if (results.multiHandLandmarks && results.multiHandedness.length) {
+    document.body.classList.add('loaded');
+    canvasCtx3.save();
+    canvasCtx3.clearRect(0, 0, out3.width, out3.height);
+    canvasCtx3.drawImage(
+        results.image, 0, 0, out3.width, out3.height);
+    if (results.multiHandLandmarks && results.multiHandedness) {
+      for (let index = 0; index < results.multiHandLandmarks.length; index++) {
+        const classification = results.multiHandedness[index];
+        const isRightHand = classification.label === 'Right';
+        const landmarks = results.multiHandLandmarks[index];
+        drawConnectors(
+            canvasCtx3, landmarks, HAND_CONNECTIONS,
+            {color: isRightHand ? '#00FF00' : '#FF0000'}),
+        drawLandmarks(canvasCtx3, landmarks, {
+          color: isRightHand ? '#00FF00' : '#FF0000',
+          fillColor: isRightHand ? '#FF0000' : '#00FF00',
+          radius: (x) => {
+            return lerp(x.from.z, -0.15, .1, 10, 1);
+          }
+        });
         if(results.multiHandedness.length===2){
             landmarks_left = results.multiHandLandmarks[0];
             landmarks_right = results.multiHandLandmarks[1];
@@ -399,22 +421,10 @@ async function onResults(results) {
             }
         }
         console.log(flattenedArray)
-        gesture_num = await updatePredict(flattenedArray);
-        direction = controlCommandMap[gesture_num];
-        console.log(direction);
-    } else direction = "STOP";
-    if (direction !== lastDirection) {
-        lastDirection = direction; 
-        const controlCommand = {
-            type: "control",
-            direction,
-        };
-        if (websocket && websocket.readyState === WebSocket.OPEN) {
-            websocket.send(JSON.stringify(controlCommand));
-            displayMessage(`Send '${direction}' command`);
-        }
-    }        
-}
+      }
+    }
+    canvasCtx3.restore();
+  }
 
 
 //Add event
