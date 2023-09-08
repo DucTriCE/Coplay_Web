@@ -381,8 +381,14 @@ async function onResults(results) {
     let gesture_num;
     if (results.multiHandLandmarks && results.multiHandedness.length) {
         if(results.multiHandedness.length===2){
-            landmarks_left = results.multiHandLandmarks[0];
-            landmarks_right = results.multiHandLandmarks[1];
+            if(results.multiHandedness[0].label==="Right"){
+                landmarks_left = results.multiHandLandmarks[0];
+                landmarks_right = results.multiHandLandmarks[1];
+            }
+            else {
+                landmarks_left = results.multiHandLandmarks[1];
+                landmarks_right = results.multiHandLandmarks[0];
+            }
             const flatten_1 = landmarks_left.flatMap(obj => Object.values(obj).slice(0, -1));
             const flatten_2 = landmarks_right.flatMap(obj => Object.values(obj).slice(0, -1));
             flattenedArray = flatten_1.concat(flatten_2);
