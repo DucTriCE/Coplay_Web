@@ -36,7 +36,7 @@ let {
 
 //Setup model for prediction
 const sess = new onnx.InferenceSession();
-const loadingModelPromise = sess.loadModel("./tri.onnx");
+const loadingModelPromise = sess.loadModel("./tri_8_100.onnx");
 
 const hands = new Hands({locateFile: (file) => {
     return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
@@ -363,7 +363,7 @@ function stop_receive() {
 // Main function for model
 
 async function updatePredict(flattenedArray){
-    const input = new onnx.Tensor(new Float32Array(flattenedArray), "float32",[1,126]);
+    const input = new onnx.Tensor(new Float32Array(flattenedArray), "float32",[1,1,126]);
     const outputMap = await sess.run([input]);
     const outputTensor = outputMap.values().next().value;
     const predictions = outputTensor.data;
