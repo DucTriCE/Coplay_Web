@@ -311,7 +311,6 @@ async function openWebSocket() {
     websocket = new WebSocket(serverURL);
     websocket.binaryType = "arraybuffer";
     websocket.onopen = async () => {
-    camera.start(); //detect
         if (device) {
             await loadingModelPromise.then(() => { //await model
                 camera.start(); //detect
@@ -404,7 +403,6 @@ async function onResults(results) {
                 flattenedArray = landmarks_left.concat(flatten_2);
             }
         }
-        console.log(flattenedArray)
         gesture_num = await updatePredict(flattenedArray);
         direction = controlCommandMap[gesture_num];
         console.log(direction);
