@@ -18,12 +18,12 @@ h1 {
 
 h2 {
   color: #e10f0f;
-  font-size: 1.3em;
+  font-size: 1.5em;
   text-decoration-color: #e26161;
 }
 
 label {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
   position: relative;
 }
@@ -31,73 +31,93 @@ label {
 label#label1 {
   position: relative;
   right: -1cm;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
 label#label2 {
   position: relative;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
+  top: 3px;
 }
 
 label#label3 {
   position: relative;
   right: -1.11cm;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
+  top: 3px;
+
 }
 
 label#label4 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
+select {
+  height: 27px;
+}
+
 input[type="text"]#robotNameInput {
+  font-size: 95%;
+  height: 20px;
   position: relative;
   top: -1px;
 }
 
 input[type="text"]#ssidInput {
+  font-size: 95%;
+  height: 20px;
   right: -0.3cm;
   position: relative;
   top: -1px;
 }
 
 input[type="text"]#hostInput {
-  right: -0.4cm;
+  font-size: 95%;
+  height: 20px;
+  right: -0.43cm;
   position: relative;
-  top: -1px;
+  top: 3px;
 }
 
 input[type="password"]#passwordInput {
+  font-size: 95%;
+  height: 20px;
   right: -1.25cm;
   position: relative;
   top: -1px;
 }
 
 input[type="number"]#portInput {
-  right: -2.5cm;
+  font-size: 95%;
+  height: 20px;
+  right: -2.6cm;
   position: relative;
-  top: -1px;
+  top: 3px;
 }
 
 input[type="text"]#channelInput {
-  right: 0cm;
+  font-size: 95%;
+  height: 20px;
+  right: -0.1cm;
   position: relative;
-  top: -1px;
+  top: 1px
 }
 
 section {
-  background-color: rgba(255, 255, 255, 0.786);
+  background-color: rgba(255, 253, 253, 0.873);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12x;
   margin-bottom: 25px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding-top: 5px;
 }
 
-/* Components */
 
+/* Components */
 .tabs__head{
   flex-shrink: 0;
   display: flex;
@@ -107,7 +127,7 @@ section {
   flex-grow: 1;
   display: block;
   text-align: center;
-  font-size: medium;
+  font-size: large;
   color: #000;
   padding: 10px;
   background: rgba(255, 255, 255, 0.786);
@@ -116,19 +136,20 @@ section {
 }
 
 .tabs__button:first-child {
+  margin-left: 0%;
   width: 3.8cm;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .tabs__button:hover {
-  background: #b5aeae;
+  background: #d3d0d0dc;
   font-weight: bold;
 }
 
 .tabs__button--active {
   flex-grow: 1;
   font-weight: bolder;
-  border-bottom: 4px solid #0fcfa9;
+  border-bottom: 4px solid #00e99b;
   background-color : #b5aeae;
 }
 
@@ -140,16 +161,14 @@ section {
   display: block;
 }
 
-/* .tabs__content > :first-child {
-  margin-top: 0;
-} */
 button {
   background-color: #567bff;
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
-  font-size: 0.8em;
+  font-size: 1em;
   margin: 0 0 1em 0;
-  padding: 0.5em 1.2em;
+  margin-left: 0.5em;
+  padding: 0.3em 1.2em;
   border: none;
   border-radius: 2px;
   cursor: pointer;
@@ -168,22 +187,23 @@ button#openWebSocketButton:hover {
 }
 
 button#stopButton {
-  margin-left: 53%;
+  margin-left: 1.5%;
+  position: relative;
   background-color: #567bff;
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
-  width: 50%;
+  width: 47%;
   border: none;
   border-radius: 2px;
   cursor: pointer;
 }
 
 button#openWebSocketButton {
-  margin-left: 104%;
+  margin-left: 2%;
   background-color: #567bff;
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
-  width: 50%;
+  width: 47%;
   border: none;
   border-radius: 2px;
   cursor: pointer;
@@ -216,18 +236,25 @@ div#links a {
 div.box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
-  margin-bottom: 1em;
+  grid-gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+div.box1 {
+  display: block;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
 }
 
 textarea {
   resize: none;
   font-family: "Roboto", sans-serif;
-  width: 100%;
-  height: 350px;
+  width: 97%;
+  height: 290px;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0.5em;
+  margin-top: 1.5%;
 }
 
 ul {
@@ -236,11 +263,12 @@ ul {
 
 video {
   background: #222;
-  margin: 13px 0 20px 0;
+  margin: 5px 0 0px 0;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  height: 95%;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: rotateY(180deg);
 }
 
 fieldset {

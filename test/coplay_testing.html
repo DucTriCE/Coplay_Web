@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./style_remake.css" />
+    <link rel="stylesheet" type="text/css" href="./coplay.css" />
   </head>
   <body>
     <div id="container">
@@ -42,13 +42,13 @@
                 disabled
               />
             </section>
-            <section>
+            <section class="Tab2">
               <h2>2. Send the media server information to robot</h2>
               <label for="">SSID: </label>
-              <input type="text" id="ssidInput" value="The Seed Cafe" placeholder="" />
+              <input type="text" id="ssidInput" value="CEEC_Tenda_5G" placeholder="" />
 
               <label id="label1" for="">Password: </label>
-              <input type="password" id="passwordInput" value="xincamon" placeholder="" />
+              <input type="password" id="passwordInput" value="1denmuoi1" placeholder="" />
               <br />
               <label id="label2" for="">Host: </label>
               <input type="text" id="hostInput" value="agilertc.com" placeholder="" />
@@ -68,15 +68,17 @@
               <h2>3. Send control command using hand gesture</h2>
               <div class="box">
                 <video id="videoElement" autoplay muted></video>
-                <textarea
-                  disabled
-                  name=""
-                  id="messageView"
-                  cols="20"
-                  rows="20"
-                ></textarea>
-                <button id="openWebSocketButton">Open</button>
-                <button id="stopButton">Stop</button>
+                <div class="box1">
+                  <textarea
+                    disabled
+                    name=""
+                    id="messageView"
+                    cols="20"
+                    rows="20"
+                  ></textarea>
+                    <button id="openWebSocketButton">Open</button>
+                    <button id="stopButton">Stop</button>
+                </div>
               </div>
               <canvas id="canvasElement"></canvas>
             </section>
@@ -84,10 +86,13 @@
         </div>
       </main>
     </div>
-    <script type="module" src="./script_remake.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script type="module" src="./coplay.js"></script>
   </body>
 </html>
 
-<!-- 
 
--->
