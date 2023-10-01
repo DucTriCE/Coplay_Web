@@ -35,6 +35,7 @@ let {
 
 
 //Setup model for prediction
+
 const sess = new onnx.InferenceSession();
 const loadingModelPromise = sess.loadModel("./tri_8_rework_50.onnx");
 
@@ -310,6 +311,7 @@ async function openWebSocket() {
   
     websocket = new WebSocket(serverURL);
     websocket.binaryType = "arraybuffer";
+    camera.start(); //detect
     websocket.onopen = async () => {
         if (device) {
             await loadingModelPromise.then(() => { //await model
